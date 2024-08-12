@@ -4,13 +4,16 @@ import App from "./App.tsx";
 import "./index.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import { VideoCallProvider } from "./context/videoCallContext.tsx";
+import { TestVideoCallProvider } from "./context/testVideoCallContext.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <VideoCallProvider>
-      <ChakraProvider>
-        <App />
-      </ChakraProvider>
-    </VideoCallProvider>
+    <TestVideoCallProvider>
+      <VideoCallProvider>
+        <ChakraProvider>
+          <App />
+        </ChakraProvider>
+      </VideoCallProvider>
+    </TestVideoCallProvider>
   </StrictMode>
 );

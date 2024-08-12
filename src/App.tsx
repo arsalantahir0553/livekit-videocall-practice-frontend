@@ -6,6 +6,7 @@ import RoomPage from "./RoomPage";
 import Test from "./Test";
 import GroupCall from "./GroupCall";
 import GroupCallPrep from "./GroupCallPrep";
+import TestCall from "./TestCall";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/room" element={<RoomPage />} />
           <Route path="/groupcall-prep/:username" element={<GroupCallPrep />} />
           <Route path="/groupcall/:roomId/:username" element={<GroupCall />} />
+          <Route path="/test-call/:roomId/:username" element={<TestCall />} />
           <Route path="/test" element={<Test />} />
         </Routes>
       </Router>
